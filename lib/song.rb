@@ -1,6 +1,7 @@
 require 'pry'
 require_relative './concerns/memorable.rb'
 class Song
+  extend Memorable
   attr_accessor :name
   attr_reader :artist
 
@@ -10,7 +11,7 @@ class Song
     @@songs << self
   end
 
-  extend Memorable
+  
 
   def self.find_by_name(name)
     @@songs.detect{|a| a.name == name}
