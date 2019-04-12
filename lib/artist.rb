@@ -2,6 +2,8 @@ require 'pry'
 
 class Artist
   extend Memorable
+  include Findable
+  include Paramable
   attr_accessor :name
   attr_reader :songs
 
