@@ -1,0 +1,3 @@
+method Findable
+
+end
