@@ -2,7 +2,7 @@ require 'pry'
 
 class Artist
   extend Memorable
-  include Findable
+  #include Findable
   include Paramable
   attr_accessor :name
   attr_reader :songs
@@ -15,9 +15,9 @@ class Artist
   end
 
   
-  #def self.find_by_name(name)
-  #  @@artists.detect{|a| a.name == name}
-  #end
+  def self.find_by_name(name)
+    @@artists.detect{|a| a.name == name}
+  end
 
   def self.all
     @@artists
